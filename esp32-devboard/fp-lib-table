@@ -1,5 +1,5 @@
 (fp_lib_table
-  (lib (name lib)(type KiCad)(uri ${KIPRJMOD}/lib.pretty)(options "")(descr ""))
+  (lib (name lib)(type KiCad)(uri ${KIPRJMOD}/../lib.pretty)(options "")(descr ""))
   (lib (name Connector_PinSocket_2.54mm)(type KiCad)(uri ${KISYSMOD}/Connector_PinSocket_2.54mm.pretty)(options "")(descr ""))
   (lib (name MountingHole)(type KiCad)(uri ${KISYSMOD}/MountingHole.pretty)(options "")(descr ""))
   (lib (name Connector_USB)(type KiCad)(uri ${KISYSMOD}/Connector_USB.pretty)(options "")(descr ""))
@@ -11,4 +11,5 @@
   (lib (name Connector_JST)(type KiCad)(uri ${KISYSMOD}/Connector_JST.pretty)(options "")(descr ""))
   (lib (name TerminalBlock)(type KiCad)(uri ${KISYSMOD}/TerminalBlock.pretty)(options "")(descr ""))
   (lib (name Diode_SMD)(type KiCad)(uri ${KISYSMOD}/Diode_SMD.pretty)(options "")(descr ""))
+  (lib (name Package_SO)(type KiCad)(uri ${KISYSMOD}/Package_SO.pretty)(options "")(descr ""))
 )
