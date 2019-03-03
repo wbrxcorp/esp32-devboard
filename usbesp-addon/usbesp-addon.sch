@@ -37,14 +37,14 @@ F 3 "~" H 4750 2650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x04 J2
+L Connector_Generic:Conn_01x02 J2
 U 1 1 5BA5AB51
-P 8150 3500
-F 0 "J2" H 8230 3542 50  0000 L CNN
-F 1 "Conn_01x04" H 8230 3451 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 8150 3500 50  0001 C CNN
-F 3 "~" H 8150 3500 50  0001 C CNN
-	1    8150 3500
+P 8150 3400
+F 0 "J2" H 8230 3442 50  0000 L CNN
+F 1 "Conn_01x02" H 8230 3351 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8150 3400 50  0001 C CNN
+F 3 "~" H 8150 3400 50  0001 C CNN
+	1    8150 3400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -70,14 +70,14 @@ F 3 "http://www.ftdichip.com/Products/ICs/FT232RL.htm" H 6250 3700 50  0001 C CN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x04 J3
+L Connector_Generic:Conn_01x02 J3
 U 1 1 5BA5F229
-P 8150 4100
-F 0 "J3" H 8230 4142 50  0000 L CNN
-F 1 "Conn_01x04" H 8230 4051 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 8150 4100 50  0001 C CNN
-F 3 "~" H 8150 4100 50  0001 C CNN
-	1    8150 4100
+P 8150 4000
+F 0 "J3" H 8230 4042 50  0000 L CNN
+F 1 "Conn_01x02" H 8230 3951 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8150 4000 50  0001 C CNN
+F 3 "~" H 8150 4000 50  0001 C CNN
+	1    8150 4000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -144,7 +144,7 @@ Wire Wire Line
 Wire Wire Line
 	7400 3000 7400 4200
 Wire Wire Line
-	7400 4200 7950 4200
+	7400 4200 8500 4200
 Text Label 7150 3000 0    50   ~ 0
 TXD
 Text Label 7150 3100 0    50   ~ 0
@@ -209,7 +209,7 @@ IO0
 Text Label 7650 3500 0    50   ~ 0
 RESET
 Wire Wire Line
-	7650 3600 7950 3600
+	7650 3600 8500 3600
 Text Label 4350 3300 0    50   ~ 0
 USBDP
 Text Label 4400 3400 0    50   ~ 0
@@ -219,11 +219,11 @@ Wire Wire Line
 Text Label 7550 2400 2    50   ~ 0
 VBUS
 Wire Wire Line
-	7950 3700 7650 3700
+	8500 3700 7650 3700
 Text Label 7900 3700 2    50   ~ 0
 USBDM
 Wire Wire Line
-	7950 4300 7650 4300
+	8500 4300 7650 4300
 Text Label 7650 4300 0    50   ~ 0
 USBDP
 $Comp
@@ -272,4 +272,26 @@ Wire Wire Line
 	7450 5550 7450 5650
 Text Label 7450 5650 0    50   ~ 0
 RTS
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5C7A4D72
+P 8700 3600
+F 0 "J1" H 8780 3642 50  0000 L CNN
+F 1 "Conn_01x02" H 8780 3551 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8700 3600 50  0001 C CNN
+F 3 "~" H 8700 3600 50  0001 C CNN
+	1    8700 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J4
+U 1 1 5C7A4D78
+P 8700 4200
+F 0 "J4" H 8780 4242 50  0000 L CNN
+F 1 "Conn_01x02" H 8780 4151 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8700 4200 50  0001 C CNN
+F 3 "~" H 8700 4200 50  0001 C CNN
+	1    8700 4200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

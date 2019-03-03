@@ -74,25 +74,25 @@ F 3 "~" H 7250 6060 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x04 J6
+L Connector_Generic:Conn_01x02 J6
 U 1 1 5C595186
-P 1300 6650
-F 0 "J6" H 1220 6967 50  0000 C CNN
-F 1 "Conn_01x04" H 1220 6876 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 1300 6650 50  0001 C CNN
-F 3 "~" H 1300 6650 50  0001 C CNN
-	1    1300 6650
+P 1300 6550
+F 0 "J6" H 1220 6867 50  0000 C CNN
+F 1 "Conn_01x02" H 1220 6776 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 1300 6550 50  0001 C CNN
+F 3 "~" H 1300 6550 50  0001 C CNN
+	1    1300 6550
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x04 J7
+L Connector_Generic:Conn_01x02 J7
 U 1 1 5C595201
-P 2400 6650
-F 0 "J7" H 2480 6642 50  0000 L CNN
-F 1 "Conn_01x04" H 2480 6551 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 2400 6650 50  0001 C CNN
-F 3 "~" H 2400 6650 50  0001 C CNN
-	1    2400 6650
+P 2400 6550
+F 0 "J7" H 2480 6542 50  0000 L CNN
+F 1 "Conn_01x02" H 2480 6451 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 2400 6550 50  0001 C CNN
+F 3 "~" H 2400 6550 50  0001 C CNN
+	1    2400 6550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -462,12 +462,12 @@ Wire Wire Line
 Text Label 4150 6350 0    50   ~ 0
 D+
 Wire Wire Line
-	1500 6850 1700 6850
-Text Label 1550 6850 0    50   ~ 0
+	1500 7300 1700 7300
+Text Label 1550 7300 0    50   ~ 0
 D-
 Wire Wire Line
-	2200 6850 2000 6850
-Text Label 2000 6850 0    50   ~ 0
+	2200 7300 2000 7300
+Text Label 2000 7300 0    50   ~ 0
 D+
 NoConn ~ 4050 6550
 Wire Wire Line
@@ -585,26 +585,26 @@ IO0
 Wire Wire Line
 	1500 6650 1700 6650
 Wire Wire Line
-	1500 6750 1700 6750
+	1500 7200 1700 7200
 Text Label 1600 6650 2    50   ~ 0
 EN
-Text Label 1500 6750 0    50   ~ 0
+Text Label 1500 7200 0    50   ~ 0
 IO0
 Wire Wire Line
 	2200 6650 2000 6650
 Wire Wire Line
-	2200 6750 2000 6750
+	2200 7200 2000 7200
 Text Label 2000 6650 0    50   ~ 0
 TXD
-Text Label 2000 6750 0    50   ~ 0
+Text Label 2000 7200 0    50   ~ 0
 RXD
 Wire Wire Line
-	1350 3600 1000 3600
+	2200 3550 1850 3550
 Wire Wire Line
-	1650 3600 2050 3600
-Text Label 1000 3600 0    50   ~ 0
-VBUS
-Text Label 1850 3600 0    50   ~ 0
+	1050 3450 1450 3450
+Text Label 1850 3550 0    50   ~ 0
+USB_PWR
+Text Label 1250 3450 0    50   ~ 0
 VIN
 $Comp
 L Connector_Generic:Conn_01x03 J8
@@ -888,24 +888,154 @@ Wire Wire Line
 Connection ~ 3500 3500
 Wire Wire Line
 	4300 4400 4300 4600
-$Comp
-L Device:D_Schottky D2
-U 1 1 5C7A5ECC
-P 1500 3600
-F 0 "D2" H 1500 3816 50  0000 C CNN
-F 1 "D_Schottky" H 1500 3725 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123" H 1500 3600 50  0001 C CNN
-F 3 "~" H 1500 3600 50  0001 C CNN
-	1    1500 3600
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	3500 4600 3900 4600
 Connection ~ 3500 4600
 Text Label 3650 4600 0    50   ~ 0
 EN
 Text Label 7200 5600 0    50   ~ 0
-VIN
+VEXT
 Text Label 4300 5500 0    50   ~ 0
 VBUS
+$Comp
+L Connector_Generic:Conn_01x02 J10
+U 1 1 5C7A979D
+P 1300 7200
+F 0 "J10" H 1220 7517 50  0000 C CNN
+F 1 "Conn_01x02" H 1220 7426 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 1300 7200 50  0001 C CNN
+F 3 "~" H 1300 7200 50  0001 C CNN
+	1    1300 7200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J11
+U 1 1 5C7B40F2
+P 2400 7200
+F 0 "J11" H 2480 7192 50  0000 L CNN
+F 1 "Conn_01x02" H 2480 7101 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 2400 7200 50  0001 C CNN
+F 3 "~" H 2400 7200 50  0001 C CNN
+	1    2400 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPDT SW2
+U 1 1 5C7B7583
+P 1650 3450
+F 0 "SW2" H 1650 3735 50  0000 C CNN
+F 1 "SW_SPDT" H 1650 3644 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 1650 3450 50  0001 C CNN
+F 3 "" H 1650 3450 50  0001 C CNN
+	1    1650 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 3350 2200 3350
+Text Label 2050 3350 0    50   ~ 0
+VEXT
+$Comp
+L Connector_Generic:Conn_01x05 J12
+U 1 1 5C7AD607
+P 9700 3900
+F 0 "J12" H 9780 3942 50  0000 L CNN
+F 1 "TPS2065DBVR" H 9780 3851 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 9700 3900 50  0001 C CNN
+F 3 "~" H 9700 3900 50  0001 C CNN
+	1    9700 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 3700 9100 3700
+Text Label 8500 3700 0    50   ~ 0
+USB_PWR
+Wire Wire Line
+	9500 4000 9500 4100
+Connection ~ 9500 4100
+Text Label 8450 4100 0    50   ~ 0
+VBUS
+Wire Wire Line
+	9500 3800 9350 3800
+Wire Wire Line
+	9350 3800 9350 4500
+$Comp
+L power:GND #PWR0102
+U 1 1 5C7D9961
+P 9350 4550
+F 0 "#PWR0102" H 9350 4300 50  0001 C CNN
+F 1 "GND" H 9355 4377 50  0000 C CNN
+F 2 "" H 9350 4550 50  0001 C CNN
+F 3 "" H 9350 4550 50  0001 C CNN
+	1    9350 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 5C7D9B0C
+P 8750 4350
+F 0 "C6" H 8865 4396 50  0000 L CNN
+F 1 "C" H 8865 4305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8788 4200 50  0001 C CNN
+F 3 "~" H 8750 4350 50  0001 C CNN
+	1    8750 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 5C7D9B12
+P 9100 4350
+F 0 "C7" H 9215 4396 50  0000 L CNN
+F 1 "C" H 9215 4305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 9138 4200 50  0001 C CNN
+F 3 "~" H 9100 4350 50  0001 C CNN
+	1    9100 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 4200 8750 4100
+Wire Wire Line
+	9100 4200 9100 3700
+Connection ~ 8750 4100
+Wire Wire Line
+	8750 4100 8450 4100
+Wire Wire Line
+	8750 4500 9100 4500
+Connection ~ 9350 4500
+Wire Wire Line
+	9350 4500 9350 4550
+Connection ~ 9100 4500
+Wire Wire Line
+	9100 4500 9350 4500
+NoConn ~ 9500 3900
+Wire Wire Line
+	8750 4100 9500 4100
+Connection ~ 9100 3700
+Wire Wire Line
+	9100 3700 8450 3700
+$Comp
+L Connector_Generic:Conn_01x01 J13
+U 1 1 5C7AEDE2
+P 4500 6300
+F 0 "J13" H 4580 6342 50  0000 L CNN
+F 1 "Conn_01x01" H 4580 6251 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x01_P2.00mm_Vertical" H 4500 6300 50  0001 C CNN
+F 3 "~" H 4500 6300 50  0001 C CNN
+	1    4500 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J14
+U 1 1 5C7AEE61
+P 4500 6500
+F 0 "J14" H 4580 6542 50  0000 L CNN
+F 1 "Conn_01x01" H 4580 6451 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x01_P2.00mm_Vertical" H 4500 6500 50  0001 C CNN
+F 3 "~" H 4500 6500 50  0001 C CNN
+	1    4500 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 6300 4300 6350
+Wire Wire Line
+	4300 6450 4300 6500
 $EndSCHEMATC
