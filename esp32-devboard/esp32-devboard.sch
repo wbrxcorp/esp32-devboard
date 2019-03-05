@@ -347,27 +347,19 @@ Wire Wire Line
 Wire Wire Line
 	3500 5000 3500 5100
 Wire Wire Line
-	4200 2100 4200 2900
-Wire Wire Line
 	4200 2900 4500 2900
-Wire Wire Line
-	4150 2300 4150 3000
 Wire Wire Line
 	4150 3000 4500 3000
 Wire Wire Line
-	4100 2500 4100 3100
-Wire Wire Line
 	4100 3100 4500 3100
-Wire Wire Line
-	4050 2700 4050 3200
 Wire Wire Line
 	4050 3200 4500 3200
 Wire Wire Line
-	4000 2900 4000 3300
+	4000 2100 4000 3300
 Wire Wire Line
 	4000 3300 4500 3300
 Wire Wire Line
-	3950 3100 3950 3400
+	3950 2300 3950 3400
 Wire Wire Line
 	3950 3400 4500 3400
 $Comp
@@ -389,7 +381,7 @@ Connection ~ 4500 4350
 Wire Wire Line
 	5100 4350 5100 4600
 Wire Wire Line
-	5100 4600 4300 4600
+	5100 4600 4800 4600
 Wire Wire Line
 	7350 1500 7350 1600
 Wire Wire Line
@@ -699,48 +691,38 @@ F 3 "" H 1150 2750 50  0001 C CNN
 	1    1150 2750
 	1    0    0    -1  
 $EndComp
-Text Label 3600 3300 0    50   ~ 0
+Text Label 3600 2500 0    50   ~ 0
 DAC1
 Wire Wire Line
-	4500 3900 4400 3900
+	4500 3900 4150 3900
 Wire Wire Line
-	4400 3900 4400 4200
+	4000 4500 3500 4500
 Wire Wire Line
-	4300 4400 3500 4400
-Connection ~ 3500 4400
+	4500 3800 4150 3800
 Wire Wire Line
-	4500 3800 4350 3800
+	4000 4300 3500 4300
 Wire Wire Line
-	4350 3800 4350 4000
+	4500 3700 4150 3700
 Wire Wire Line
-	4400 4200 3500 4200
-Connection ~ 3500 4200
-Wire Wire Line
-	4500 3700 4300 3700
-Wire Wire Line
-	4300 3700 4300 3800
-Wire Wire Line
-	4350 4000 3500 4000
-Connection ~ 3500 4000
+	4000 4100 3500 4100
 Wire Wire Line
 	4500 3600 3850 3600
 Wire Wire Line
-	4300 3800 3500 3800
-Connection ~ 3500 3800
+	4000 3900 3500 3900
 Wire Wire Line
 	3500 3700 3900 3700
 Connection ~ 3500 3700
 Text Label 3650 3700 0    50   ~ 0
 VIN
-Text Label 3600 3500 0    50   ~ 0
+Text Label 3600 2700 0    50   ~ 0
 DAC2
-Text Label 3650 3800 0    50   ~ 0
+Text Label 4250 3700 0    50   ~ 0
 IO27
-Text Label 3650 4000 0    50   ~ 0
+Text Label 4250 3800 0    50   ~ 0
 IO14
-Text Label 3650 4200 0    50   ~ 0
+Text Label 3600 3300 0    50   ~ 0
 IO12
-Text Label 3650 4400 0    50   ~ 0
+Text Label 3600 3500 0    50   ~ 0
 IO13
 Text Label 6000 4350 0    50   ~ 0
 IO2
@@ -842,56 +824,37 @@ Connection ~ 7350 4300
 Connection ~ 6450 4300
 Wire Wire Line
 	6450 4300 6450 4500
-Wire Wire Line
-	4200 2100 3500 2100
-Connection ~ 3500 2100
-Text Label 3650 2100 0    50   ~ 0
+Text Label 4350 2900 0    50   ~ 0
 A0
 Wire Wire Line
-	4150 2300 3500 2300
-Wire Wire Line
 	3500 2300 3500 2200
-Connection ~ 3500 2300
-Text Label 3650 2300 0    50   ~ 0
+Text Label 4350 3000 0    50   ~ 0
 A3
-Wire Wire Line
-	4100 2500 3500 2500
-Connection ~ 3500 2500
-Text Label 3650 2500 0    50   ~ 0
+Text Label 4350 3100 0    50   ~ 0
 34
-Wire Wire Line
-	4050 2700 3500 2700
-Connection ~ 3500 2700
-Text Label 3650 2700 0    50   ~ 0
+Text Label 4350 3200 0    50   ~ 0
 35
 Wire Wire Line
-	4000 2900 3500 2900
-Connection ~ 3500 2900
-Text Label 3650 2900 0    50   ~ 0
+	4000 2100 3500 2100
+Text Label 3650 2100 0    50   ~ 0
 32
 Wire Wire Line
-	3500 3100 3950 3100
-Connection ~ 3500 3100
-Text Label 3650 3100 0    50   ~ 0
+	3500 2300 3950 2300
+Text Label 3650 2300 0    50   ~ 0
 33
 Wire Wire Line
 	4500 3500 3900 3500
 Wire Wire Line
-	3900 3500 3900 3300
+	3900 3500 3900 2500
 Wire Wire Line
-	3900 3300 3500 3300
-Connection ~ 3500 3300
+	3900 2500 3500 2500
 Wire Wire Line
-	3850 3600 3850 3500
+	3850 3600 3850 2700
 Wire Wire Line
-	3850 3500 3500 3500
-Connection ~ 3500 3500
+	3850 2700 3500 2700
 Wire Wire Line
-	4300 4400 4300 4600
-Wire Wire Line
-	3500 4600 3900 4600
-Connection ~ 3500 4600
-Text Label 3650 4600 0    50   ~ 0
+	3500 4700 3900 4700
+Text Label 3650 4700 0    50   ~ 0
 EN
 Text Label 7200 5600 0    50   ~ 0
 VEXT
@@ -1038,4 +1001,41 @@ Wire Wire Line
 	4300 6300 4300 6350
 Wire Wire Line
 	4300 6450 4300 6500
+Connection ~ 3500 2100
+Connection ~ 3500 2300
+Connection ~ 3500 2500
+Connection ~ 3500 2700
+Wire Wire Line
+	3500 2900 3800 2900
+Connection ~ 3500 2900
+Wire Wire Line
+	3500 3100 3800 3100
+Connection ~ 3500 3100
+Wire Wire Line
+	3500 3300 3800 3300
+Connection ~ 3500 3300
+Wire Wire Line
+	3500 3500 3800 3500
+Connection ~ 3500 3500
+Text Label 3600 2900 0    50   ~ 0
+IO27
+Text Label 3600 3100 0    50   ~ 0
+IO14
+Text Label 4250 3900 0    50   ~ 0
+IO12
+Text Label 4900 4600 0    50   ~ 0
+IO13
+Connection ~ 3500 3900
+Connection ~ 3500 4100
+Connection ~ 3500 4300
+Connection ~ 3500 4500
+Connection ~ 3500 4700
+Text Label 3650 3900 0    50   ~ 0
+A0
+Text Label 3650 4100 0    50   ~ 0
+A3
+Text Label 3650 4300 0    50   ~ 0
+34
+Text Label 3650 4500 0    50   ~ 0
+35
 $EndSCHEMATC
