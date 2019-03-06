@@ -147,19 +147,6 @@ F 3 "~" H 8000 4200 50  0001 C CNN
 	1    8000 4200
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J9
-U 1 1 5C7C8525
-P 8000 4650
-F 0 "J9" H 8080 4642 50  0000 L CNN
-F 1 "Conn_01x02" H 8080 4551 50  0000 L CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 8000 4650 50  0001 C CNN
-F 3 "~" H 8000 4650 50  0001 C CNN
-	1    8000 4650
-	1    0    0    -1  
-$EndComp
 NoConn ~ 7800 4200
 NoConn ~ 7800 4300
-NoConn ~ 7800 4650
-NoConn ~ 7800 4750
 $EndSCHEMATC
