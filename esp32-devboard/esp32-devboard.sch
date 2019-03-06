@@ -809,8 +809,6 @@ Wire Wire Line
 Connection ~ 7350 3900
 Wire Wire Line
 	7350 3900 7050 3900
-Wire Wire Line
-	6450 3950 6450 4300
 Text Label 6000 4500 0    50   ~ 0
 IO15
 Wire Wire Line
@@ -820,10 +818,6 @@ Wire Wire Line
 Connection ~ 7350 4100
 Wire Wire Line
 	7350 4300 6450 4300
-Connection ~ 7350 4300
-Connection ~ 6450 4300
-Wire Wire Line
-	6450 4300 6450 4500
 Text Label 4350 2900 0    50   ~ 0
 A0
 Wire Wire Line
@@ -1038,4 +1032,15 @@ Text Label 3650 4300 0    50   ~ 0
 34
 Text Label 3650 4500 0    50   ~ 0
 35
+Connection ~ 6450 4300
+Connection ~ 7350 4300
+Wire Wire Line
+	6450 4300 6450 4500
+Wire Wire Line
+	6450 3950 6450 4300
+Wire Wire Line
+	7350 4500 6850 4500
+Connection ~ 7350 4500
+Text Label 7050 4500 0    50   ~ 0
+3V3
 $EndSCHEMATC
