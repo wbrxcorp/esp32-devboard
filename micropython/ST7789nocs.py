@@ -43,42 +43,32 @@ class ST7789nocs(framebuf.FrameBuffer):
         self.res(1)
 
     def init_display(self):
-        self.write_cmd(ST77XX_SWRESET)
-        utime.sleep_ms(150)
-        self.write_cmd(ST77XX_SLPOUT)
-        utime.sleep_ms(500)
-        self.write_cmd(ST77XX_COLMOD)
-        self.write_data(bytearray([0x55]))
-        utime.sleep_ms(10)
-        self.write_cmd(ST77XX_MADCTL)
-        self.write_data(bytearray([ST77XX_MADCTL_RGB]))
-        self.write_cmd(ST77XX_CASET)
-        self.write_data(bytearray([0, 0, 0, 239]))
-        self.write_cmd(ST77XX_RASET)
-        self.write_data(bytearray([0, 0, 0, 119]))
-        self.write_cmd(ST77XX_INVON)
-        utime.sleep_ms(10)
-        self.write_cmd(ST77XX_NORON)
-        utime.sleep_ms(10)
-        self.write_cmd(ST77XX_DISPON)
-        utime.sleep_ms(500)
+        self.write(ST77XX_SWRESET)
+        self.write(ST77XX_SLPOUT)
+        self.write(ST77XX_COLMOD, bytearray([0x55]))
+        self.write(ST77XX_MADCTL, bytearray([ST77XX_MADCTL_RGB]))
+        self.write(ST77XX_CASET, bytearray([0, 0, 0, 239]))
+        self.write(ST77XX_RASET, bytearray([0, 0, 0, 119]))
+        self.write(ST77XX_INVON)
+        self.write(ST77XX_NORON)
+        self.write(ST77XX_DISPON)
 
         self.fill(0x0000)
         self.show()
 
     def show(self):
-        self.write_cmd(ST77XX_RAMWR)
+        self.write(ST77XX_RAMWR)
         mv = memoryview(self.buffer)
         for offset in range(0,self.width * self.height / 64):
-            self.write_data(bytes(mv[offset * 64 * 2 : offset * 64 * 2 + 128]))
+            self.write(None, bytes(mv[offset * 64 * 2 : offset * 64 * 2 + 128]))
 
-    def write_cmd(self, cmd):
-        self.dc(0)
-        self.spi.write(bytearray([cmd]))
-
-    def write_data(self, buf):
-        self.dc(1)
-        self.spi.write(buf)
+    def write(self, cmd = None, data = None):
+        if cmd is not None:
+            self.dc(0)
+            self.spi.write(bytearray([cmd]))
+        if data is not None:
+            self.dc(1)
+            self.spi.write(data)
 
 '''
 from machine import Pin,SPI
