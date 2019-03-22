@@ -231,22 +231,6 @@ Text Label 7100 4700 2    50   ~ 0
 RXD
 Text Label 7100 4900 2    50   ~ 0
 0
-$Comp
-L power:GND #PWR0103
-U 1 1 5C92DC34
-P 6850 5000
-F 0 "#PWR0103" H 6850 4750 50  0001 C CNN
-F 1 "GND" H 6855 4827 50  0000 C CNN
-F 2 "" H 6850 5000 50  0001 C CNN
-F 3 "" H 6850 5000 50  0001 C CNN
-	1    6850 5000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6850 5000 7100 5000
-Connection ~ 7100 5000
-Text Label 6950 5300 0    50   ~ 0
-3V3
 Text Label 4550 4900 0    50   ~ 0
 34
 Text Label 4550 5100 0    50   ~ 0
