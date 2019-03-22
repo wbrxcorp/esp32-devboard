@@ -20,7 +20,7 @@ ST77XX_MADCTL_MV = const(0x20)
 ST77XX_MADCTL_RGB = const(0x00)
 
 class ST7789nocs(framebuf.FrameBuffer):
-    def __init__(self, spi, dc, res):
+    def __init__(self, spi, dc, res, buffer):
         dc.init(dc.OUT, value=0)
         res.init(res.OUT, value=1)
         self.spi = spi
@@ -30,8 +30,8 @@ class ST7789nocs(framebuf.FrameBuffer):
         self.spi.init(baudrate=self.rate, polarity=1, phase=1)
         self.reset()
         self.width = 240
-        self.height = 120
-        self.buffer = bytearray(self.height * self.width * 2)
+        self.height = 240
+        self.buffer = buffer
         super().__init__(self.buffer, self.width, self.height, framebuf.RGB565)
         self.init_display()
 
@@ -48,7 +48,7 @@ class ST7789nocs(framebuf.FrameBuffer):
         self.write(ST77XX_COLMOD, bytearray([0x55]))
         self.write(ST77XX_MADCTL, bytearray([ST77XX_MADCTL_RGB]))
         self.write(ST77XX_CASET, bytearray([0, 0, 0, 239]))
-        self.write(ST77XX_RASET, bytearray([0, 0, 0, 119]))
+        self.write(ST77XX_RASET, bytearray([0, 0, 0, 239]))
         self.write(ST77XX_INVON)
         self.write(ST77XX_NORON)
         self.write(ST77XX_DISPON)
@@ -58,9 +58,7 @@ class ST7789nocs(framebuf.FrameBuffer):
 
     def show(self):
         self.write(ST77XX_RAMWR)
-        mv = memoryview(self.buffer)
-        for offset in range(0,self.width * self.height / 64):
-            self.write(None, bytes(mv[offset * 64 * 2 : offset * 64 * 2 + 128]))
+        self.write(None, self.buffer)
 
     def write(self, cmd = None, data = None):
         if cmd is not None:
@@ -73,8 +71,27 @@ class ST7789nocs(framebuf.FrameBuffer):
 '''
 from machine import Pin,SPI
 from ST7789nocs import ST7789nocs
-tft = ST7789nocs(SPI(2,sck=Pin(18),mosi=Pin(23),miso=Pin(19)),dc=Pin(5),res=Pin(0))
-tft.text('Hello, World!', 0, 50, 0xffff)
-tft.show()
+import utime,uctypes
+import native_memory
+
+bufsize = 240 * 240 * 2
+buffer = uctypes.bytearray_at(native_memory.alloc(0, bufsize), bufsize)
+tft = ST7789nocs(SPI(2,sck=Pin(18),mosi=Pin(23),miso=Pin(19)),Pin(5),Pin(0),buffer)
+
+start = utime.ticks_ms()
+
+for i in range(0,100):
+    tft.fill(0xffff)
+    tft.text('Hello, World!', i, i, 0x0)
+    tft.text('Hello, World!', i, i + 8, 0xff00)
+    tft.text('Hello, World!', i, i + 16, 0x0ff0)
+    tft.text('Hello, World!', i, i + 24, 0x00ff)
+    tft.show()
+
+end = utime.ticks_ms()
+
+fps = 100 * 1000 / (end - start)
+
+print("%d fps." % fps)
 
 '''
